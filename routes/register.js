@@ -12,7 +12,6 @@ router.get('/', function (req, res) {
 
 router.post('/', function (req, res, next) {
     Account.register(new Account({username: req.body.username}), req.body.password,
-
         function (err, account) {
             if (err) {
                 console.log(err.message);
